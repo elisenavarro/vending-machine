@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
   <head>
-    <meta charset="UTF-8">
-    <title>Playground - JavaScript 101</title>
+    <meta charset="UTF-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Vending Machine</title>
   </head>
   <body>
-    <p style="margin-top: 40vh; text-align: center; font: normal 24px monospace;">
-      Open the console 🤓
-    </p>
+    <h1 style="margin-top: 40vh; text-align: center; font: normal 24px monospace;">Vending Machine</h1>
 
-    <!-- Add some HTML in here -->
+    <!-- FORM -->
+    <form style="margin-top: 5vh; margin-bottom: 5vh; text-align: center; font: normal 24px monospace;">
+      <Span>$1.00</Span>
+      <input type="text" name='ones' id='ones' placeholder="0" value='0'/>
+      <br />
+
+      <Span>$5.00</Span>
+      <input type="text" name='fives' id='fives' placeholder="0" value='0'/>
+      <br />
+
+      <Span>$0.05</Span>
+      <input type="text" name='nickels' id='nickels' placeholder="0" value='0'/>
+      <br />
+
+      <Span>$0.10</Span>
+      <input type="text" name='dimes' id='dimes' placeholder="0" value='0'/>
+      <br />
+
+      <Span>$0.25<span>
+      <input type="text" name='quarters' id='quarters' placeholder="0" value='0'/>
+      <br />
+
+    </form>
+
+    <!-- BUTTONS -->
+    <button value='Coke' id='coke' style="margin-top: 10px">Coke</button>
+    <button value='Sprite' id='sprite'>Sprite</button>
+    <button value='Lemonade' id='lemonade'>Lemonade</button>
+    <button value='Water' id='water'>Water</button>
+    <br />
+    <button value='cancel' id='cancel' style="margin-top: 10px; background-color: rgba(255, 0, 0, 0.548)">Cancel Transaction</button>
+
+    <h2>Total Entered: $<span>0.00</span></h2>
+    <h2>Insert $ first, then select your beverage.</h2>
 
     <script src="main.js"></script>
   </body>
