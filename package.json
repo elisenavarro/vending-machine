@@ -1,10 +1,10 @@
 {
-  "name": "javascript-101",
+  "name": "javascript-vending-machine",
   "version": "1.0.0",
-  "description": "Starting code for First JavaScript ES6 lecture",
+  "description": "Basic Vending Machine with vanilla JS",
   "main": "index.js",
-  "repository": "https://github.com/lewagon/webpack-boilerplate",
-  "author": "ssaunier",
+  "repository": "https://github.com/elisenavarro/vending-machine.git",
+  "author": "elise navarro",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^5.9.0",
