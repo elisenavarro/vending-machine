@@ -1,47 +1,42 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Vending Machine</title>
   </head>
   <body>
-    <h1 style="margin-top: 40vh; text-align: center; font: normal 24px monospace;">Vending Machine</h1>
+    <h1 style="margin-top: 10vh; text-align: center; font: normal 24px monospace;">Vending Machine</h1>
 
     <!-- FORM -->
     <form style="margin-top: 5vh; margin-bottom: 5vh; text-align: center; font: normal 24px monospace;">
       <Span>$1.00</Span>
-      <input type="text" name='ones' id='ones' placeholder="0" value='0'/>
+      <input type="text" name="ones" id="ones" placeholder="0" value="0" oninput="sumInsertedMoney()"/>
       <br />
-
       <Span>$5.00</Span>
-      <input type="text" name='fives' id='fives' placeholder="0" value='0'/>
+      <input type="text" name="fives" id="fives" placeholder="0" value="0" oninput="sumInsertedMoney()"/>
       <br />
-
       <Span>$0.05</Span>
-      <input type="text" name='nickels' id='nickels' placeholder="0" value='0'/>
+      <input type="text" name="nickels" id="nickels" placeholder="0" value="0" oninput="sumInsertedMoney()"/>
       <br />
-
       <Span>$0.10</Span>
-      <input type="text" name='dimes' id='dimes' placeholder="0" value='0'/>
+      <input type="text" name="dimes" id="dimes" placeholder="0" value="0" onchange="sumInsertedMoney()"/>
       <br />
-
       <Span>$0.25<span>
-      <input type="text" name='quarters' id='quarters' placeholder="0" value='0'/>
+      <input type="text" name="quarters" id="quarters" placeholder="0" value="0" oninput="sumInsertedMoney()"/>
       <br />
-
     </form>
 
     <!-- BUTTONS -->
-    <button value='Coke' id='coke' style="margin-top: 10px">Coke</button>
-    <button value='Sprite' id='sprite'>Sprite</button>
-    <button value='Lemonade' id='lemonade'>Lemonade</button>
-    <button value='Water' id='water'>Water</button>
+    <button value='Coke' id='coke' style="margin-top: 10px" onclick="dispenseBeverage(0)">Coke</button>
+    <button value='Sprite' id='sprite' onclick="dispenseBeverage(1)">Sprite</button>
+    <button value='Lemonade' id='lemonade' onclick="dispenseBeverage(2)">Lemonade</button>
+    <button value='Water' id='water' onclick="dispenseBeverage(3)">Water</button>
     <br />
-    <button value='cancel' id='cancel' style="margin-top: 10px; background-color: rgba(255, 0, 0, 0.548)">Cancel Transaction</button>
+    <button value='Cancel' id='cancel' onclick="clearInsertedMoney()" style="margin-top: 10px; background-color: rgba(255, 0, 0, 0.548)">Cancel Transaction</button>
 
-    <h2>Total Entered: $<span>0.00</span></h2>
-    <h2>Insert $ first, then select your beverage.</h2>
+    <h2>Total Entered: $<span id="paid">0.00</span></h2>
+    <h2 id="message">Insert money first, then select your beverage.</h2>
 
     <script src="main.js"></script>
   </body>
